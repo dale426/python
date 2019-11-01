@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Book
 from django.urls import reverse
+from django.http import JsonResponse
+
 # Create your views here.
 
 
