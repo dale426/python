@@ -50,3 +50,7 @@ deactivate
 ```shell
 python manage.py createsuperuser
 ```
+
+## json数据
+
+1. [django数据转换成json的三种方法](https://blog.csdn.net/shirukai/article/details/81086242)

@@ -1,11 +1,21 @@
+import os
+import django
+
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
+django.setup()
+
 from django.shortcuts import render
+
+import json
+from django.core import serializers
 
 # Create your views here.
 from django.http import HttpResponse
 from django.http import JsonResponse
 
 from django.conf import settings
-# from libs.models import Book
+from lib.models import Book
 
 
 def login(request):
@@ -21,7 +31,13 @@ def img(request):
 
 
 def get(request):
-  # book_list = Book.objects.order_by('-pub_date')
-  # response = JsonResponse(book_list)
   response = JsonResponse({'foo': 'bar'})
   return HttpResponse(response)
+
+def getjson(request):
+  book_list = Book.objects.order_by('-pub_date')
+  data = {}
+  data['code'] = 200
+  data['msg'] = "查询方式 ：json.loads(serializers.serialize('json', book_list))"
+  data['data'] = json.loads(serializers.serialize('json', book_list))
+  return JsonResponse(data, safe=False)

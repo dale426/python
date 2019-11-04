@@ -6,4 +6,5 @@ urlpatterns = [
   path('', views.login, name='login'),
   path('img', views.img, name='img'),
   path('get', views.get, name='get'),
+  path('getjson', views.getjson, name='getjson'),
 ]
