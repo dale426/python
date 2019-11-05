@@ -53,4 +53,6 @@ python manage.py createsuperuser
 
 ## json数据
 
-1. [django数据转换成json的三种方法](https://blog.csdn.net/shirukai/article/details/81086242)
+1. [django数据转换成json的三种方法](https://blog.csdn.net/weixin_34234721/article/details/93078899)
+
+2. [Python http请求方法](https://www.jianshu.com/p/9a9dd097d282)
